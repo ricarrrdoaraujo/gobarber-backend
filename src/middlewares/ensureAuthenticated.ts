@@ -27,7 +27,7 @@ export default function ensureAuthenticated(
 
   try {
     const decoded = verify(token, authConfig.jwt.secret);
-    // Se retornou um usuário inválido, permitimos que continue
+    // Se retornou um usuário válido, permitimos que continue
 
     const { sub } = decoded as TokenPayload; // forçando que o decoded é do tipo TokenPayload
 
